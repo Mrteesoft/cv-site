@@ -93,6 +93,12 @@ const phoneServerMetrics = [
   "Persistent shell sessions"
 ];
 
+const cvBuilderMetrics = [
+  "AI-guided resume content",
+  "Professional templates",
+  "PDF export"
+];
+
 const experienceItems = [
   {
     company: "Aigenthic",
@@ -312,6 +318,42 @@ const projectTech = {
         }
       ]
     }
+  ],
+  cvBuilder: [
+    {
+      group: "Android",
+      items: [
+        {
+          name: "Java",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+        },
+        {
+          name: "Android",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+        },
+        {
+          name: "SQLite",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+        }
+      ]
+    },
+    {
+      group: "Build",
+      items: [
+        {
+          name: "Gradle",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
+        },
+        {
+          name: "Material UI",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
+        },
+        {
+          name: "AdMob",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg"
+        }
+      ]
+    }
   ]
 };
 
@@ -490,6 +532,9 @@ export default function Home() {
               It helps builders publish agent apps, let users pin releases, and
               keep agent activity verifiable across production workflows.
             </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Trusted AI agent discovery, controlled installs, and verifiable release history.
+            </p>
             <ProjectStack groups={projectTech.aigenthic} />
             <div className={styles.projectMetrics} aria-label="Aigenthic project highlights">
               {projectMetrics.map((item) => (
@@ -545,6 +590,9 @@ export default function Home() {
               assets they already hold on another chain, with quote, execute,
               confirm, and status flows built for wallet teams.
             </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Users getting stuck without native gas when moving across chains.
+            </p>
             <ProjectStack groups={projectTech.nexafuel} />
             <div className={styles.projectMetrics} aria-label="NexaFuel project highlights">
               {nexafuelMetrics.map((item) => (
@@ -598,6 +646,9 @@ export default function Home() {
               agents with deep context, and run private signal surfaces with
               controlled data and risk rules.
             </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Turning noisy market data into actionable signals and private trading workflows.
+            </p>
             <ProjectStack groups={projectTech.lunatrixx} />
             <div className={styles.projectMetrics} aria-label="Lunatrixx project highlights">
               {lunatrixxMetrics.map((item) => (
@@ -650,6 +701,9 @@ export default function Home() {
               product packages image delivery into a simple interface for links,
               previews, and developer-ready sharing flows.
             </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Fast image sharing with clean previews and developer-friendly links.
+            </p>
             <ProjectStack groups={projectTech.pixunio} />
             <a
               className={styles.darkButton}
@@ -698,6 +752,9 @@ export default function Home() {
               Base preparation into an on-device runtime without account setup
               or an external control plane.
             </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Running Linux-style development workflows directly from an Android phone.
+            </p>
             <ProjectStack groups={projectTech.phoneServer} />
             <div className={styles.projectMetrics} aria-label="Pocket Ubuntu Server project highlights">
               {phoneServerMetrics.map((item) => (
@@ -741,6 +798,65 @@ export default function Home() {
             rel="noreferrer"
           >
             View Phone Server on GitHub
+          </a>
+        </div>
+
+        <div className={styles.projectIntro}>
+          <div>
+            <span className={styles.eyebrow}>Android product</span>
+            <h2>CV Builder AI</h2>
+            <p>
+              CV Builder AI is a Java Android application for creating
+              professional resumes on mobile. It guides users through templates,
+              structured CV forms, AI writing help, preview screens, and PDF
+              export, with local SQLite storage and AdMob monetization.
+            </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Helping job seekers build polished CVs from a phone without fighting document formatting.
+            </p>
+            <ProjectStack groups={projectTech.cvBuilder} />
+            <div className={styles.projectMetrics} aria-label="CV Builder AI project highlights">
+              {cvBuilderMetrics.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+            <a
+              className={styles.darkButton}
+              href="https://github.com/Mrteesoft/Cv_builder-application"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ArrowIcon />
+              Open GitHub repo
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={`${styles.livePreview} ${styles.phonePreview} ${styles.cvPreview}`}
+          aria-label="CV Builder AI Android dashboard preview"
+        >
+          <div className={styles.browserBar}>
+            <span />
+            <span />
+            <span />
+            <p>github.com/Mrteesoft/Cv_builder-application</p>
+          </div>
+          <div className={styles.phonePreviewStage}>
+            <img
+              src="/cv-builder.jpeg"
+              alt="CV Builder AI Android dashboard with AI assistant, templates, and recent CV progress"
+              loading="lazy"
+            />
+            <p>AI-guided CV templates and PDF export</p>
+          </div>
+          <a
+            className={styles.previewFallback}
+            href="https://github.com/Mrteesoft/Cv_builder-application"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View CV Builder on GitHub
           </a>
         </div>
       </section>

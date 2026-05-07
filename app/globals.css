@@ -3,6 +3,10 @@
   --foreground: #fff8eb;
   --accent: #f9b537;
   --ink: #11120d;
+  --site-gradient: linear-gradient(100deg, #332a18 0%, #24251f 48%, #101820 100%);
+  --site-grid-horizontal: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  --site-grid-vertical: linear-gradient(90deg, rgba(255, 255, 255, 0.038) 1px, transparent 1px);
+  --site-grid-size: 90px 82px;
 }
 
 * {
@@ -18,7 +22,17 @@ body {
   min-height: 100%;
   margin: 0;
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
+  background-image:
+    var(--site-grid-horizontal),
+    var(--site-grid-vertical),
+    var(--site-gradient);
+  background-position: top center;
+  background-size:
+    var(--site-grid-size),
+    var(--site-grid-size),
+    auto;
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;

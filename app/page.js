@@ -1,12 +1,5 @@
 import styles from "./page.module.scss";
 
-const trustItems = [
-  "Clean portfolio systems",
-  "Transparent build process",
-  "Sharp visual direction",
-  "Launch-ready delivery"
-];
-
 const aboutHighlights = [
   "Backend systems",
   "Fintech infrastructure",
@@ -88,6 +81,18 @@ const lunatrixxMetrics = [
   "Private deployments"
 ];
 
+const nexafuelMetrics = [
+  "Cross-chain gas top-ups",
+  "Pay gas with any token",
+  "Wallet-ready API"
+];
+
+const phoneServerMetrics = [
+  "Local-only Android runtime",
+  "Ubuntu Base staging",
+  "Persistent shell sessions"
+];
+
 const experienceItems = [
   {
     company: "Aigenthic",
@@ -103,17 +108,17 @@ const experienceItems = [
     focus: ["AI agents", "Marketplace", "Trust systems"]
   },
   {
-    company: "HyperX LTD",
+    company: "Nexfuel",
     role: "Lead Backend Engineer",
     period: "2023 - Present",
     summary:
-      "Leading backend architecture for fintech infrastructure, wallet systems, transaction flows, background jobs, and production APIs.",
+      "Leading backend architecture for cross-chain gas abstraction, wallet funding flows, route status tracking, and production APIs.",
     details: [
-      "Lead fintech backend architecture and service delivery",
-      "Own wallet systems, transaction flows, and background jobs",
-      "Build production APIs for scalable financial infrastructure"
+      "Lead backend architecture for cross-chain gas top-up workflows",
+      "Own quote, execution, confirmation, and status-tracking API flows",
+      "Build wallet-ready services for paying gas with non-native assets"
     ],
-    focus: ["Fintech", "Wallets", "Production APIs"]
+    focus: ["Gas abstraction", "Wallet APIs", "Cross-chain flows"]
   },
   {
     company: "Coconut Africa",
@@ -142,6 +147,13 @@ const experienceItems = [
     focus: ["Client platforms", "APIs", "Launch support"]
   }
 ];
+
+const education = {
+  school: "Federal University of Agriculture, Abeokuta",
+  degree: "B.Sc. Statistics",
+  logo: "/funaab-logo.jpg",
+  focus: ["Statistical modeling", "Data analysis", "Quantitative systems"]
+};
 
 const projectTech = {
   aigenthic: [
@@ -200,6 +212,51 @@ const projectTech = {
       ]
     }
   ],
+  nexafuel: [
+    {
+      group: "Frontend",
+      items: [
+        {
+          name: "Next.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+        },
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        }
+      ]
+    },
+    {
+      group: "Backend",
+      items: [
+        {
+          name: "Node.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        },
+        {
+          name: "Redis",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+        },
+        {
+          name: "MongoDB",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+        }
+      ]
+    },
+    {
+      group: "Web3",
+      items: [
+        {
+          name: "Solana",
+          icon: "https://cryptologos.cc/logos/solana-sol-logo.svg"
+        },
+        {
+          name: "EVM",
+          icon: "https://cryptologos.cc/logos/ethereum-eth-logo.svg"
+        }
+      ]
+    }
+  ],
   pixunio: [
     {
       group: "Frontend",
@@ -216,6 +273,42 @@ const projectTech = {
         {
           name: "Node.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        }
+      ]
+    }
+  ],
+  phoneServer: [
+    {
+      group: "Android",
+      items: [
+        {
+          name: "Java",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+        },
+        {
+          name: "Android",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+        }
+      ]
+    },
+    {
+      group: "Runtime",
+      items: [
+        {
+          name: "Gradle",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
+        },
+        {
+          name: "Linux",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+        },
+        {
+          name: "Ubuntu",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg"
         }
       ]
     }
@@ -293,12 +386,6 @@ export default function Home() {
         <div className={styles.media} aria-hidden="true" />
         <div className={styles.scrim} aria-hidden="true" />
 
-        <div className={styles.trustBar} aria-label="Project highlights">
-          {trustItems.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-
         <header className={styles.navWrap}>
           <a className={styles.brand} href="/" aria-label="Tolulope Olaniyan home">
             Tolulope Olaniyan
@@ -309,6 +396,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#stack">Services</a>
             <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
           </nav>
 
           <a className={styles.login} href="#contact">
@@ -319,7 +407,7 @@ export default function Home() {
 
         <div className={styles.heroCopy}>
           <h1 id="hero-title">
-            Standout web presence, simplified.
+            Software that scales cleanly.
           </h1>
           <a className={styles.cta} href="#contact">
             <ArrowIcon />
@@ -327,14 +415,6 @@ export default function Home() {
           </a>
         </div>
 
-        <a
-          className={styles.credit}
-          href="https://www.freepik.com/free-photo/turned-gray-laptop-computer_12661377.htm"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Image by Freepik
-        </a>
       </section>
 
       <section className={styles.about} id="about" aria-labelledby="about-title">
@@ -349,7 +429,7 @@ export default function Home() {
 
         <div className={styles.aboutCopy}>
           <span className={styles.eyebrow}>About me</span>
-          <h2 id="about-title">Engineering reliable platforms for real products.</h2>
+          <h2 id="about-title">Built for speed. Designed to last.</h2>
           <div className={styles.aboutRule} />
           <p>
             I am Tolulope Olaniyan, a software engineer focused on backend systems,
@@ -358,7 +438,7 @@ export default function Home() {
             background jobs, and scalable services using Node.js, TypeScript,
             Python, PostgreSQL, Redis, and modern cloud tools. My work connects
             clean engineering with real product delivery, from fintech platforms
-            like HyperX to AI systems, trading tools, and developer focused
+            like Nexfuel to AI systems, trading tools, and developer focused
             applications.
           </p>
 
@@ -436,11 +516,11 @@ export default function Home() {
             <p>https://www.aigenthic.xyz</p>
           </div>
           <iframe
-            src="/api/project-preview?site=aigenthic"
+            src="https://www.aigenthic.xyz/"
             title="Live preview of Aigenthic"
             loading="lazy"
             referrerPolicy="no-referrer"
-            sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
           />
           <a
             className={styles.previewFallback}
@@ -449,6 +529,61 @@ export default function Home() {
             rel="noreferrer"
           >
             Open Aigenthic if the live preview is blocked
+          </a>
+        </div>
+
+        <div className={styles.projectIntro}>
+          <div>
+            <span className={styles.eyebrow}>Featured project</span>
+            <div className={styles.nexafuelTitle}>
+              <img src="/nexafuel-logo-mark.png" alt="" aria-hidden="true" loading="lazy" />
+              <h2>NexaFuel</h2>
+            </div>
+            <p>
+              NexaFuel is a cross-chain gas abstraction system for wallets and
+              dApps. It lets users top up native gas on a target chain using
+              assets they already hold on another chain, with quote, execute,
+              confirm, and status flows built for wallet teams.
+            </p>
+            <ProjectStack groups={projectTech.nexafuel} />
+            <div className={styles.projectMetrics} aria-label="NexaFuel project highlights">
+              {nexafuelMetrics.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+            <a
+              className={styles.darkButton}
+              href="https://www.nexafuel.xyz/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ArrowIcon />
+              Open live site
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.livePreview} aria-label="Live preview of NexaFuel website">
+          <div className={styles.browserBar}>
+            <span />
+            <span />
+            <span />
+            <p>https://www.nexafuel.xyz</p>
+          </div>
+          <iframe
+            src="https://www.nexafuel.xyz/"
+            title="Live preview of NexaFuel"
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+          />
+          <a
+            className={styles.previewFallback}
+            href="https://www.nexafuel.xyz/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open NexaFuel if the live preview is blocked
           </a>
         </div>
 
@@ -551,6 +686,63 @@ export default function Home() {
             Open Pixunio if the live preview is blocked
           </a>
         </div>
+
+        <div className={styles.projectIntro}>
+          <div>
+            <span className={styles.eyebrow}>Mobile Linux project</span>
+            <h2>Pocket Ubuntu Server</h2>
+            <p>
+              Pocket Ubuntu Server is a local-first Android app that turns a
+              phone into a self-managed server workspace. It brings terminal
+              sessions, local project storage, managed services, and Ubuntu
+              Base preparation into an on-device runtime without account setup
+              or an external control plane.
+            </p>
+            <ProjectStack groups={projectTech.phoneServer} />
+            <div className={styles.projectMetrics} aria-label="Pocket Ubuntu Server project highlights">
+              {phoneServerMetrics.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+            <a
+              className={styles.darkButton}
+              href="https://github.com/Mrteesoft/phone-server"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ArrowIcon />
+              Open GitHub repo
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={`${styles.livePreview} ${styles.phonePreview}`}
+          aria-label="Pocket Ubuntu Server Android terminal preview"
+        >
+          <div className={styles.browserBar}>
+            <span />
+            <span />
+            <span />
+            <p>github.com/Mrteesoft/phone-server</p>
+          </div>
+          <div className={styles.phonePreviewStage}>
+            <img
+              src="/server-phone.jpeg"
+              alt="Pocket Ubuntu Server Android terminal running an Ubuntu 22.04 shell"
+              loading="lazy"
+            />
+            <p>Ubuntu 22.04 LTS on-phone terminal runtime</p>
+          </div>
+          <a
+            className={styles.previewFallback}
+            href="https://github.com/Mrteesoft/phone-server"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Phone Server on GitHub
+          </a>
+        </div>
       </section>
 
       <section className={styles.experience} id="experience" aria-labelledby="experience-title">
@@ -611,6 +803,30 @@ export default function Home() {
               </article>
             ))}
           </div>
+
+          <div className={styles.education} id="education" aria-labelledby="education-title">
+            <div className={styles.educationIntro}>
+              <p>Education</p>
+              <h3 id="education-title">Academic background</h3>
+            </div>
+
+            <article className={styles.educationCard}>
+              <div className={styles.educationLogo}>
+                <img src={education.logo} alt={`${education.school} logo`} loading="lazy" />
+              </div>
+
+              <div className={styles.educationBody}>
+                <p className={styles.educationMeta}>Federal University of Agriculture, Abeokuta</p>
+                <h4>{education.school}</h4>
+                <p className={styles.educationDegree}>{education.degree}</p>
+                <div className={styles.educationHighlights} aria-label="Education focus areas">
+                  {education.focus.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -635,6 +851,7 @@ export default function Home() {
               <a href="#about">ABOUT</a>
               <a href="#stack">STACK</a>
               <a href="#experience">EXPERIENCE</a>
+              <a href="#education">EDUCATION</a>
               <a href="#contact">CONTACT</a>
             </nav>
             <p className={styles.footerCopyright}>

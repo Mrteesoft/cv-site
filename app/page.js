@@ -161,6 +161,23 @@ const education = {
   focus: ["Statistical modeling", "Data analysis", "Quantitative systems"]
 };
 
+const achievements = [
+  {
+    title: "Microsoft for Startups Recipient",
+    meta: "Microsoft for Startups",
+    summary:
+      "Aigenthic was selected for Microsoft for Startups, receiving access to up to $100,000 in Azure cloud credits to support AI infrastructure, Azure AI services, and technical scaling.",
+    highlights: ["Azure credits", "AI infrastructure", "Technical scaling"]
+  },
+  {
+    title: "Amadeus Genesis Hack Participant",
+    meta: "TAIKAI hackathon",
+    summary:
+      "Participated in the Amadeus Genesis Hack hackathon hosted on TAIKAI and received a commemorative hackathon NFT for participation.",
+    highlights: ["Hackathon", "TAIKAI", "Participation NFT"]
+  }
+];
+
 const projectTech = {
   aigenthic: [
     {
@@ -386,6 +403,19 @@ function ExperienceIcon() {
   );
 }
 
+function AchievementIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" />
+      <path d="M6 5H4.5A1.5 1.5 0 0 0 3 6.5V7a4 4 0 0 0 4 4" />
+      <path d="M18 5h1.5A1.5 1.5 0 0 1 21 6.5V7a4 4 0 0 1-4 4" />
+      <path d="M12 12v4" />
+      <path d="M9 20h6" />
+      <path d="M10 16h4l1 4H9l1-4Z" />
+    </svg>
+  );
+}
+
 function TechCard({ tech }) {
   return (
     <article className={styles.techCard}>
@@ -438,6 +468,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#stack">Services</a>
             <a href="#experience">Experience</a>
+            <a href="#achievements">Awards</a>
             <a href="#education">Education</a>
           </nav>
 
@@ -946,6 +977,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.achievements} id="achievements" aria-labelledby="achievements-title">
+        <div className={styles.achievementsIntro}>
+          <span className={styles.eyebrow}>Recognition</span>
+          <h2 id="achievements-title">Achievements & Recognition</h2>
+          <p>
+            Selected milestones across startup programs, AI infrastructure, and
+            hackathon participation.
+          </p>
+        </div>
+
+        <div className={styles.achievementGrid}>
+          {achievements.map((achievement) => (
+            <article className={styles.achievementCard} key={achievement.title}>
+              <div className={styles.achievementIcon}>
+                <AchievementIcon />
+              </div>
+              <div className={styles.achievementBody}>
+                <p>{achievement.meta}</p>
+                <h3>{achievement.title}</h3>
+                <span>{achievement.summary}</span>
+                <div
+                  className={styles.achievementTags}
+                  aria-label={`${achievement.title} highlights`}
+                >
+                  {achievement.highlights.map((highlight) => (
+                    <em key={highlight}>{highlight}</em>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <footer className={styles.footer} id="contact" aria-labelledby="footer-title">
         <div className={styles.footerWordmark} aria-hidden="true">
           <span>Tolulope</span>
@@ -967,6 +1032,7 @@ export default function Home() {
               <a href="#about">ABOUT</a>
               <a href="#stack">STACK</a>
               <a href="#experience">EXPERIENCE</a>
+              <a href="#achievements">ACHIEVEMENTS</a>
               <a href="#education">EDUCATION</a>
               <a href="#contact">CONTACT</a>
             </nav>

@@ -22,17 +22,7 @@ body {
   min-height: 100%;
   margin: 0;
   color: var(--foreground);
-  background-color: var(--background);
-  background-image:
-    var(--site-grid-horizontal),
-    var(--site-grid-vertical),
-    var(--site-gradient);
-  background-position: top center;
-  background-size:
-    var(--site-grid-size),
-    var(--site-grid-size),
-    auto;
-  background-attachment: fixed;
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;

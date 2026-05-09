@@ -99,6 +99,12 @@ const cvBuilderMetrics = [
   "PDF export"
 ];
 
+const lizzotechMetrics = [
+  "Solar sizing wizard",
+  "Power station storefront",
+  "WhatsApp sales flow"
+];
+
 const experienceItems = [
   {
     company: "Aigenthic",
@@ -166,8 +172,8 @@ const achievements = [
     title: "Microsoft for Startups Recipient",
     meta: "Microsoft for Startups",
     summary:
-      "Aigenthic was selected for Microsoft for Startups, receiving access to up to $100,000 in Azure cloud credits to support AI infrastructure, Azure AI services, and technical scaling.",
-    highlights: ["Azure credits", "AI infrastructure", "Technical scaling"]
+      "Aigenthic was selected for Microsoft for Startups, receiving access to up to $100,000 in Azure cloud credits to support cloud services, product infrastructure, and technical scaling.",
+    highlights: ["Azure credits", "Cloud infrastructure", "Technical scaling"]
   },
   {
     title: "Amadeus Genesis Hack Participant",
@@ -176,6 +182,17 @@ const achievements = [
       "Participated in the Amadeus Genesis Hack hackathon hosted on TAIKAI and received a commemorative hackathon NFT for participation.",
     highlights: ["Hackathon", "TAIKAI", "Participation NFT"]
   }
+];
+
+const systemMapItems = [
+  "Product Architecture",
+  "Install Workflows",
+  "API Contracts",
+  "Wallet Flows",
+  "Payment Rails",
+  "Data Models",
+  "Cloud Delivery",
+  "Launch Support"
 ];
 
 const projectTech = {
@@ -296,6 +313,34 @@ const projectTech = {
         {
           name: "Node.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        }
+      ]
+    }
+  ],
+  lizzotech: [
+    {
+      group: "Frontend",
+      items: [
+        {
+          name: "HTML5",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        },
+        {
+          name: "CSS3",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        },
+        {
+          name: "JavaScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        }
+      ]
+    },
+    {
+      group: "Deployment",
+      items: [
+        {
+          name: "Vercel",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
         }
       ]
     }
@@ -774,6 +819,62 @@ export default function Home() {
 
         <div className={styles.projectIntro}>
           <div>
+            <span className={styles.eyebrow}>Featured project</span>
+            <h2>Lizzotech</h2>
+            <p>
+              Lizzotech Dynamic Solutions is a solar power station storefront
+              for Nigerian homes and businesses. The site pairs polished energy
+              product pages with a conversational sizing wizard, WhatsApp sales
+              routing, product showcases, and a clear process for turning outage
+              needs into installation-ready recommendations.
+            </p>
+            <p className={styles.projectSolve}>
+              <strong>Solves:</strong> Helping customers choose the right solar backup system without guessing from generic inverter tables.
+            </p>
+            <ProjectStack groups={projectTech.lizzotech} />
+            <div className={styles.projectMetrics} aria-label="Lizzotech project highlights">
+              {lizzotechMetrics.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+            <a
+              className={styles.darkButton}
+              href="https://lizzotech.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ArrowIcon />
+              Open live site
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.livePreview} aria-label="Live preview of Lizzotech website">
+          <div className={styles.browserBar}>
+            <span />
+            <span />
+            <span />
+            <p>https://lizzotech.vercel.app</p>
+          </div>
+          <iframe
+            src="https://lizzotech.vercel.app/"
+            title="Live preview of Lizzotech"
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+          />
+          <a
+            className={styles.previewFallback}
+            href="https://lizzotech.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Lizzotech if the live preview is blocked
+          </a>
+        </div>
+
+        <div className={styles.projectIntro}>
+          <div>
             <span className={styles.eyebrow}>Mobile Linux project</span>
             <h2>Pocket Ubuntu Server</h2>
             <p>
@@ -982,7 +1083,7 @@ export default function Home() {
           <span className={styles.eyebrow}>Recognition</span>
           <h2 id="achievements-title">Achievements & Recognition</h2>
           <p>
-            Selected milestones across startup programs, AI infrastructure, and
+            Selected milestones across startup programs, cloud infrastructure, and
             hackathon participation.
           </p>
         </div>
@@ -1008,6 +1109,41 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.systemMap} aria-labelledby="system-map-title">
+        <h2 className={styles.systemMapTitle} id="system-map-title">
+          Product delivery surfaces
+        </h2>
+        <div className={styles.systemMapCanvas}>
+          <div className={styles.systemMapTiles}>
+            {systemMapItems.map((item) => (
+              <span className={styles.systemMapTile} key={item}>
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <svg
+            className={styles.systemMapLines}
+            viewBox="0 0 1440 540"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M126 104 C126 250 560 270 720 430" />
+            <path d="M296 104 C296 238 596 282 720 430" />
+            <path d="M466 104 C466 228 628 294 720 430" />
+            <path d="M636 104 C636 220 690 306 720 430" />
+            <path d="M804 104 C804 220 750 306 720 430" />
+            <path d="M974 104 C974 228 812 294 720 430" />
+            <path d="M1144 104 C1144 238 844 282 720 430" />
+            <path d="M1314 104 C1314 250 880 270 720 430" />
+          </svg>
+
+          <div className={styles.systemMapHub} aria-hidden="true">
+            <span>TO</span>
+          </div>
         </div>
       </section>
 

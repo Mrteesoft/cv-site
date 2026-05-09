@@ -13,6 +13,12 @@ const projectPreviews = {
     name: "Pixunio",
     url: "https://www.pixunio.xyz/",
     description: "Clean image-link sharing with previews and developer-ready flows."
+  },
+  lizzotech: {
+    name: "Lizzotech",
+    url: "https://lizzotech.vercel.app/",
+    description:
+      "Solar power station storefront and sizing wizard for Nigerian homes and businesses."
   }
 };
 

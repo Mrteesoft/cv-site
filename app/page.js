@@ -110,6 +110,7 @@ const experienceItems = [
     company: "Aigenthic",
     role: "Technical Founder",
     period: "Current",
+    location: "Remote",
     summary:
       "Building the AI agent marketplace across product architecture, trusted install flows, pinned manifests, and verifiable deployment workflows.",
     details: [
@@ -123,6 +124,7 @@ const experienceItems = [
     company: "Nexfuel",
     role: "Lead Backend Engineer",
     period: "2023 - Present",
+    location: "Remote",
     summary:
       "Leading backend architecture for cross-chain gas abstraction, wallet funding flows, route status tracking, and production APIs.",
     details: [
@@ -134,8 +136,9 @@ const experienceItems = [
   },
   {
     company: "Coconut Africa",
-    role: "Software Engineer",
-    period: "August 2024 - March 2026",
+    role: "Senior Backend Engineer",
+    period: "August 2025 - March 2026",
+    location: "Hybrid",
     summary:
       "Worked on reliable web platforms and service delivery across product, backend, and operational workflows.",
     details: [
@@ -149,6 +152,7 @@ const experienceItems = [
     company: "GEEPEE Industries Limited",
     role: "SIWES Industrial Trainee",
     period: "April 2024 - August 2024",
+    location: "On-site",
     logo: "https://geepee.com/wp-content/uploads/2018/09/Red-Logo-5.png",
     summary:
       "Completed SIWES industrial training as a logistics assistant, supporting inventory operations with TallyPrime and ERP workflows.",
@@ -163,6 +167,7 @@ const experienceItems = [
     company: "Freelance",
     role: "Software Engineer",
     period: "2020 - 2023",
+    location: "Remote",
     summary:
       "Built client web platforms, backend services, APIs, dashboards, and product prototypes across early-stage projects.",
     details: [
@@ -1076,6 +1081,7 @@ export default function Home() {
                     )}
                   </span>
                   <span className={styles.timelinePeriod}>{item.period}</span>
+                  <span className={styles.timelineLocation}>{item.location}</span>
                 </div>
                 <div className={styles.timelineBody}>
                   <div className={styles.timelineHeading}>

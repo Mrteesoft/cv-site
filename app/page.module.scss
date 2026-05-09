@@ -1063,7 +1063,8 @@
 }
 
 .timelineIcon,
-.timelinePeriod {
+.timelinePeriod,
+.timelineLocation {
   position: relative;
   z-index: 1;
 }
@@ -1111,6 +1112,23 @@
   letter-spacing: 0.12em;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.timelineLocation {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 253, 244, 0.12);
+  border-radius: 999px;
+  color: rgba(255, 253, 244, 0.74);
+  background: rgba(255, 253, 244, 0.045);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .timelineBody {
@@ -2425,6 +2443,10 @@
   .timelinePeriod {
     max-width: none;
     text-align: right;
+  }
+
+  .timelineLocation {
+    justify-self: end;
   }
 
   .timelineDetails {

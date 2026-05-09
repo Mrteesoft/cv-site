@@ -146,6 +146,20 @@ const experienceItems = [
     focus: ["Platform delivery", "Backend workflows", "Ops systems"]
   },
   {
+    company: "GEEPEE Industries Limited",
+    role: "SIWES Industrial Trainee",
+    period: "April 2024 - August 2024",
+    logo: "https://geepee.com/wp-content/uploads/2018/09/Red-Logo-5.png",
+    summary:
+      "Completed SIWES industrial training as a logistics assistant, supporting inventory operations with TallyPrime and ERP workflows.",
+    details: [
+      "Supported logistics and inventory documentation across daily operations",
+      "Operated TallyPrime for inventory records and stock movement tracking",
+      "Worked with ERP systems for inventory updates, reporting, and warehouse coordination"
+    ],
+    focus: ["SIWES", "Logistics", "Inventory systems"]
+  },
+  {
     company: "Freelance",
     role: "Software Engineer",
     period: "2020 - 2023",
@@ -457,6 +471,30 @@ function AchievementIcon() {
       <path d="M12 12v4" />
       <path d="M9 20h6" />
       <path d="M10 16h4l1 4H9l1-4Z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.063 2.063 0 1 1 0-4.128 2.063 2.063 0 0 1 0 4.128ZM7.119 20.452H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z" />
+    </svg>
+  );
+}
+
+function XIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+    </svg>
+  );
+}
+
+function GitHubIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.535-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.11.81 2.235 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12Z" />
     </svg>
   );
 }
@@ -1026,8 +1064,16 @@ export default function Home() {
                 key={`${item.company}-${item.period}`}
               >
                 <div className={styles.timelineMeta}>
-                  <span className={styles.timelineIcon}>
-                    <ExperienceIcon />
+                  <span
+                    className={`${styles.timelineIcon} ${
+                      item.logo ? styles.timelineLogo : ""
+                    }`}
+                  >
+                    {item.logo ? (
+                      <img src={item.logo} alt={`${item.company} logo`} loading="lazy" />
+                    ) : (
+                      <ExperienceIcon />
+                    )}
                   </span>
                   <span className={styles.timelinePeriod}>{item.period}</span>
                 </div>
@@ -1147,6 +1193,55 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.follow} aria-labelledby="follow-title">
+        <div className={styles.followIntro}>
+          <span className={styles.eyebrow}>Follow me</span>
+          <h2 id="follow-title">Follow the build across socials.</h2>
+        </div>
+
+        <div className={styles.followLinks} aria-label="Social profiles">
+          <a
+            href="https://ng.linkedin.com/in/mrteesoft"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className={styles.followIcon}>
+              <LinkedInIcon />
+            </span>
+            <span>
+              <strong>LinkedIn</strong>
+              <em>Professional updates</em>
+            </span>
+          </a>
+          <a
+            href="https://x.com/Mrtee_O_SOft"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className={styles.followIcon}>
+              <XIcon />
+            </span>
+            <span>
+              <strong>X</strong>
+              <em>Build notes</em>
+            </span>
+          </a>
+          <a
+            href="https://github.com/Mrteesoft"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className={styles.followIcon}>
+              <GitHubIcon />
+            </span>
+            <span>
+              <strong>GitHub</strong>
+              <em>Code and repos</em>
+            </span>
+          </a>
+        </div>
+      </section>
+
       <footer className={styles.footer} id="contact" aria-labelledby="footer-title">
         <div className={styles.footerWordmark} aria-hidden="true">
           <span>Tolulope</span>
@@ -1164,6 +1259,35 @@ export default function Home() {
               </a>
               <a href="#">TOP</a>
             </div>
+            <nav className={styles.footerSocials} aria-label="Social profiles">
+              <a
+                href="https://ng.linkedin.com/in/mrteesoft"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <LinkedInIcon />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://x.com/Mrtee_O_SOft"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="X profile"
+              >
+                <XIcon />
+                <span>X</span>
+              </a>
+              <a
+                href="https://github.com/Mrteesoft"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub profile"
+              >
+                <GitHubIcon />
+                <span>GitHub</span>
+              </a>
+            </nav>
             <nav className={styles.footerLinks} aria-label="Footer links">
               <a href="#about">ABOUT</a>
               <a href="#stack">STACK</a>

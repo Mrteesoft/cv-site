@@ -1,6 +1,6 @@
 .page {
   min-height: 100vh;
-  padding: 4px;
+  padding: 0;
   background-color: #111315;
   background-image:
     var(--site-grid-horizontal),
@@ -16,10 +16,10 @@
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 8px);
+  min-height: 100vh;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #fffdf4;
   background: #111315;
 }
@@ -203,12 +203,12 @@
   grid-template-columns: minmax(310px, 0.92fr) minmax(480px, 1.08fr);
   align-items: center;
   gap: 72px;
-  min-height: calc(100vh - 8px);
-  margin-top: 4px;
+  min-height: 100vh;
+  margin-top: 0;
   padding: 86px max(56px, 6vw) 92px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #232323;
   background:
     linear-gradient(90deg, rgba(244, 242, 233, 0.95) 0%, rgba(250, 249, 241, 0.98) 54%, rgba(229, 223, 201, 0.95) 100%);
@@ -387,12 +387,12 @@
 
 .stack {
   position: relative;
-  min-height: calc(100vh - 8px);
-  margin-top: 4px;
+  min-height: 100vh;
+  margin-top: 0;
   padding: 76px 0 106px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #fffdf4;
   background-color: #111315;
   background-image:
@@ -506,12 +506,12 @@
   column-gap: 52px;
   row-gap: 82px;
   align-items: center;
-  min-height: calc(100vh - 8px);
-  margin-top: 4px;
+  min-height: 100vh;
+  margin-top: 0;
   padding: 72px max(40px, 4vw) 86px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #f7f2e8;
   background-color: #111315;
   background-image:
@@ -869,15 +869,15 @@
 
 .experience {
   position: relative;
-  min-height: calc(100vh - 8px);
-  margin-top: 4px;
+  min-height: 100vh;
+  margin-top: 0;
   display: grid;
   grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(42px, 6vw, 98px);
   padding: 116px max(42px, 4.7vw) 108px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #fffdf4;
   background-color: #111315;
   background-image:
@@ -1350,11 +1350,11 @@
   position: relative;
   display: block;
   min-height: auto;
-  margin-top: 4px;
+  margin-top: 0;
   padding: 82px max(42px, 4.7vw) 88px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #151713;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0) 36%),
@@ -1533,11 +1533,11 @@
 .systemMap {
   position: relative;
   min-height: 660px;
-  margin-top: 4px;
+  margin-top: 0;
   padding: 38px max(28px, 3.2vw) 42px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #111315;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0) 30%),
@@ -1653,11 +1653,11 @@
   gap: clamp(38px, 5vw, 82px);
   align-items: center;
   min-height: 520px;
-  margin-top: 4px;
+  margin-top: 0;
   padding: 82px max(38px, 4.4vw) 88px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #fffdf4;
   background-color: #111315;
   background-image:
@@ -1765,11 +1765,11 @@
 
 .footer {
   position: relative;
-  margin-top: 4px;
+  margin-top: 0;
   padding: 96px max(28px, 3.2vw) 40px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 7px;
+  border: 0;
+  border-radius: 0;
   color: #fff;
   background-color: #111315;
   background-image:

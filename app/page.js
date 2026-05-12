@@ -121,20 +121,6 @@ const experienceItems = [
     focus: ["AI agents", "Marketplace", "Trust systems"]
   },
   {
-    company: "Nexfuel",
-    role: "Lead Backend Engineer",
-    period: "2023 - Present",
-    location: "Remote",
-    summary:
-      "Leading backend architecture for cross-chain gas abstraction, wallet funding flows, route status tracking, and production APIs.",
-    details: [
-      "Lead backend architecture for cross-chain gas top-up workflows",
-      "Own quote, execution, confirmation, and status-tracking API flows",
-      "Build wallet-ready services for paying gas with non-native assets"
-    ],
-    focus: ["Gas abstraction", "Wallet APIs", "Cross-chain flows"]
-  },
-  {
     company: "Coconut Africa",
     role: "Senior Backend Engineer",
     period: "August 2025 - March 2026",
